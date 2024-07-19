@@ -1,0 +1,10 @@
+D:\programmin\first jorney\Pizza Project\bin\Debug\Pizza Project.exe.config
+D:\programmin\first jorney\Pizza Project\bin\Debug\Pizza Project.exe
+D:\programmin\first jorney\Pizza Project\bin\Debug\Pizza Project.pdb
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza Project.csproj.AssemblyReference.cache
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza_Project.frmPizzaOrder.resources
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza_Project.Properties.Resources.resources
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza Project.csproj.GenerateResource.cache
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza Project.csproj.CoreCompileInputs.cache
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza Project.exe
+D:\programmin\first jorney\Pizza Project\obj\Debug\Pizza Project.pdb
