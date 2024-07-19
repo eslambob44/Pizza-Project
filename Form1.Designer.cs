@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPizzaOrder));
             this.label1 = new System.Windows.Forms.Label();
             this.rbSmall = new System.Windows.Forms.RadioButton();
             this.rbMedium = new System.Windows.Forms.RadioButton();
@@ -84,7 +85,7 @@
             this.rbSmall.AutoSize = true;
             this.rbSmall.Checked = true;
             this.rbSmall.Location = new System.Drawing.Point(21, 41);
-            this.rbSmall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbSmall.Margin = new System.Windows.Forms.Padding(2);
             this.rbSmall.Name = "rbSmall";
             this.rbSmall.Size = new System.Drawing.Size(50, 17);
             this.rbSmall.TabIndex = 1;
@@ -98,7 +99,7 @@
             // 
             this.rbMedium.AutoSize = true;
             this.rbMedium.Location = new System.Drawing.Point(21, 83);
-            this.rbMedium.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbMedium.Margin = new System.Windows.Forms.Padding(2);
             this.rbMedium.Name = "rbMedium";
             this.rbMedium.Size = new System.Drawing.Size(62, 17);
             this.rbMedium.TabIndex = 2;
@@ -111,7 +112,7 @@
             // 
             this.rbLarge.AutoSize = true;
             this.rbLarge.Location = new System.Drawing.Point(21, 125);
-            this.rbLarge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbLarge.Margin = new System.Windows.Forms.Padding(2);
             this.rbLarge.Name = "rbLarge";
             this.rbLarge.Size = new System.Drawing.Size(52, 17);
             this.rbLarge.TabIndex = 3;
@@ -126,9 +127,9 @@
             this.gbPizzaSize.Controls.Add(this.rbMedium);
             this.gbPizzaSize.Controls.Add(this.rbSmall);
             this.gbPizzaSize.Location = new System.Drawing.Point(25, 72);
-            this.gbPizzaSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbPizzaSize.Margin = new System.Windows.Forms.Padding(2);
             this.gbPizzaSize.Name = "gbPizzaSize";
-            this.gbPizzaSize.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbPizzaSize.Padding = new System.Windows.Forms.Padding(2);
             this.gbPizzaSize.Size = new System.Drawing.Size(116, 168);
             this.gbPizzaSize.TabIndex = 4;
             this.gbPizzaSize.TabStop = false;
@@ -139,7 +140,7 @@
             this.rbThin.AutoSize = true;
             this.rbThin.Checked = true;
             this.rbThin.Location = new System.Drawing.Point(21, 33);
-            this.rbThin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbThin.Margin = new System.Windows.Forms.Padding(2);
             this.rbThin.Name = "rbThin";
             this.rbThin.Size = new System.Drawing.Size(72, 17);
             this.rbThin.TabIndex = 5;
@@ -153,7 +154,7 @@
             // 
             this.rbThick.AutoSize = true;
             this.rbThick.Location = new System.Drawing.Point(21, 74);
-            this.rbThick.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbThick.Margin = new System.Windows.Forms.Padding(2);
             this.rbThick.Name = "rbThick";
             this.rbThick.Size = new System.Drawing.Size(78, 17);
             this.rbThick.TabIndex = 6;
@@ -167,9 +168,9 @@
             this.gbCrust.Controls.Add(this.rbThin);
             this.gbCrust.Controls.Add(this.rbThick);
             this.gbCrust.Location = new System.Drawing.Point(25, 262);
-            this.gbCrust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbCrust.Margin = new System.Windows.Forms.Padding(2);
             this.gbCrust.Name = "gbCrust";
-            this.gbCrust.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbCrust.Padding = new System.Windows.Forms.Padding(2);
             this.gbCrust.Size = new System.Drawing.Size(112, 123);
             this.gbCrust.TabIndex = 7;
             this.gbCrust.TabStop = false;
@@ -179,7 +180,7 @@
             // 
             this.chkExtraCheese.AutoSize = true;
             this.chkExtraCheese.Location = new System.Drawing.Point(16, 35);
-            this.chkExtraCheese.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkExtraCheese.Margin = new System.Windows.Forms.Padding(2);
             this.chkExtraCheese.Name = "chkExtraCheese";
             this.chkExtraCheese.Size = new System.Drawing.Size(88, 17);
             this.chkExtraCheese.TabIndex = 8;
@@ -192,7 +193,7 @@
             // 
             this.chkOnion.AutoSize = true;
             this.chkOnion.Location = new System.Drawing.Point(153, 35);
-            this.chkOnion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkOnion.Margin = new System.Windows.Forms.Padding(2);
             this.chkOnion.Name = "chkOnion";
             this.chkOnion.Size = new System.Drawing.Size(54, 17);
             this.chkOnion.TabIndex = 9;
@@ -205,7 +206,7 @@
             // 
             this.chkMashrooms.AutoSize = true;
             this.chkMashrooms.Location = new System.Drawing.Point(16, 75);
-            this.chkMashrooms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkMashrooms.Margin = new System.Windows.Forms.Padding(2);
             this.chkMashrooms.Name = "chkMashrooms";
             this.chkMashrooms.Size = new System.Drawing.Size(80, 17);
             this.chkMashrooms.TabIndex = 10;
@@ -218,7 +219,7 @@
             // 
             this.chkOlives.AutoSize = true;
             this.chkOlives.Location = new System.Drawing.Point(153, 75);
-            this.chkOlives.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkOlives.Margin = new System.Windows.Forms.Padding(2);
             this.chkOlives.Name = "chkOlives";
             this.chkOlives.Size = new System.Drawing.Size(55, 17);
             this.chkOlives.TabIndex = 11;
@@ -231,7 +232,7 @@
             // 
             this.chkGreenPepeers.AutoSize = true;
             this.chkGreenPepeers.Location = new System.Drawing.Point(153, 115);
-            this.chkGreenPepeers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkGreenPepeers.Margin = new System.Windows.Forms.Padding(2);
             this.chkGreenPepeers.Name = "chkGreenPepeers";
             this.chkGreenPepeers.Size = new System.Drawing.Size(97, 17);
             this.chkGreenPepeers.TabIndex = 12;
@@ -244,7 +245,7 @@
             // 
             this.chkTomatoes.AutoSize = true;
             this.chkTomatoes.Location = new System.Drawing.Point(16, 115);
-            this.chkTomatoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkTomatoes.Margin = new System.Windows.Forms.Padding(2);
             this.chkTomatoes.Name = "chkTomatoes";
             this.chkTomatoes.Size = new System.Drawing.Size(73, 17);
             this.chkTomatoes.TabIndex = 13;
@@ -262,9 +263,9 @@
             this.gbToppings.Controls.Add(this.chkOnion);
             this.gbToppings.Controls.Add(this.chkExtraCheese);
             this.gbToppings.Location = new System.Drawing.Point(250, 93);
-            this.gbToppings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbToppings.Margin = new System.Windows.Forms.Padding(2);
             this.gbToppings.Name = "gbToppings";
-            this.gbToppings.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbToppings.Padding = new System.Windows.Forms.Padding(2);
             this.gbToppings.Size = new System.Drawing.Size(287, 157);
             this.gbToppings.TabIndex = 14;
             this.gbToppings.TabStop = false;
@@ -275,9 +276,9 @@
             this.gbWhereToEat.Controls.Add(this.rbTakeOut);
             this.gbWhereToEat.Controls.Add(this.rbEatIn);
             this.gbWhereToEat.Location = new System.Drawing.Point(250, 262);
-            this.gbWhereToEat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbWhereToEat.Margin = new System.Windows.Forms.Padding(2);
             this.gbWhereToEat.Name = "gbWhereToEat";
-            this.gbWhereToEat.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbWhereToEat.Padding = new System.Windows.Forms.Padding(2);
             this.gbWhereToEat.Size = new System.Drawing.Size(201, 81);
             this.gbWhereToEat.TabIndex = 17;
             this.gbWhereToEat.TabStop = false;
@@ -287,7 +288,7 @@
             // 
             this.rbTakeOut.AutoSize = true;
             this.rbTakeOut.Location = new System.Drawing.Point(110, 33);
-            this.rbTakeOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbTakeOut.Margin = new System.Windows.Forms.Padding(2);
             this.rbTakeOut.Name = "rbTakeOut";
             this.rbTakeOut.Size = new System.Drawing.Size(70, 17);
             this.rbTakeOut.TabIndex = 18;
@@ -300,7 +301,7 @@
             this.rbEatIn.AutoSize = true;
             this.rbEatIn.Checked = true;
             this.rbEatIn.Location = new System.Drawing.Point(30, 33);
-            this.rbEatIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rbEatIn.Margin = new System.Windows.Forms.Padding(2);
             this.rbEatIn.Name = "rbEatIn";
             this.rbEatIn.Size = new System.Drawing.Size(53, 17);
             this.rbEatIn.TabIndex = 17;
@@ -312,7 +313,7 @@
             // btnOrderPizza
             // 
             this.btnOrderPizza.Location = new System.Drawing.Point(268, 380);
-            this.btnOrderPizza.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrderPizza.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderPizza.Name = "btnOrderPizza";
             this.btnOrderPizza.Size = new System.Drawing.Size(101, 24);
             this.btnOrderPizza.TabIndex = 18;
@@ -323,7 +324,7 @@
             // btnResetForm
             // 
             this.btnResetForm.Location = new System.Drawing.Point(418, 380);
-            this.btnResetForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetForm.Name = "btnResetForm";
             this.btnResetForm.Size = new System.Drawing.Size(101, 24);
             this.btnResetForm.TabIndex = 19;
@@ -347,9 +348,9 @@
             this.gbOrderSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrderSummary.ForeColor = System.Drawing.Color.Black;
             this.gbOrderSummary.Location = new System.Drawing.Point(620, 51);
-            this.gbOrderSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbOrderSummary.Margin = new System.Windows.Forms.Padding(2);
             this.gbOrderSummary.Name = "gbOrderSummary";
-            this.gbOrderSummary.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbOrderSummary.Padding = new System.Windows.Forms.Padding(2);
             this.gbOrderSummary.Size = new System.Drawing.Size(256, 353);
             this.gbOrderSummary.TabIndex = 20;
             this.gbOrderSummary.TabStop = false;
@@ -481,7 +482,8 @@
             this.Controls.Add(this.gbCrust);
             this.Controls.Add(this.gbPizzaSize);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmPizzaOrder";
             this.Text = "Pizza Order";
             this.Shown += new System.EventHandler(this.frmPizzaOrder_Shown);
