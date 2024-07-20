@@ -131,7 +131,7 @@
             this.gbPizzaSize.Name = "gbPizzaSize";
             this.gbPizzaSize.Padding = new System.Windows.Forms.Padding(2);
             this.gbPizzaSize.Size = new System.Drawing.Size(116, 168);
-            this.gbPizzaSize.TabIndex = 4;
+            this.gbPizzaSize.TabIndex = 0;
             this.gbPizzaSize.TabStop = false;
             this.gbPizzaSize.Text = "Size";
             // 
@@ -172,7 +172,7 @@
             this.gbCrust.Name = "gbCrust";
             this.gbCrust.Padding = new System.Windows.Forms.Padding(2);
             this.gbCrust.Size = new System.Drawing.Size(112, 123);
-            this.gbCrust.TabIndex = 7;
+            this.gbCrust.TabIndex = 4;
             this.gbCrust.TabStop = false;
             this.gbCrust.Text = "Crust";
             // 
@@ -235,7 +235,7 @@
             this.chkGreenPepeers.Margin = new System.Windows.Forms.Padding(2);
             this.chkGreenPepeers.Name = "chkGreenPepeers";
             this.chkGreenPepeers.Size = new System.Drawing.Size(97, 17);
-            this.chkGreenPepeers.TabIndex = 12;
+            this.chkGreenPepeers.TabIndex = 13;
             this.chkGreenPepeers.Tag = "tyujtu";
             this.chkGreenPepeers.Text = "Green Pepeers";
             this.chkGreenPepeers.UseVisualStyleBackColor = true;
@@ -248,7 +248,7 @@
             this.chkTomatoes.Margin = new System.Windows.Forms.Padding(2);
             this.chkTomatoes.Name = "chkTomatoes";
             this.chkTomatoes.Size = new System.Drawing.Size(73, 17);
-            this.chkTomatoes.TabIndex = 13;
+            this.chkTomatoes.TabIndex = 12;
             this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
@@ -267,7 +267,7 @@
             this.gbToppings.Name = "gbToppings";
             this.gbToppings.Padding = new System.Windows.Forms.Padding(2);
             this.gbToppings.Size = new System.Drawing.Size(287, 157);
-            this.gbToppings.TabIndex = 14;
+            this.gbToppings.TabIndex = 7;
             this.gbToppings.TabStop = false;
             this.gbToppings.Text = "Toppings";
             // 
@@ -280,7 +280,7 @@
             this.gbWhereToEat.Name = "gbWhereToEat";
             this.gbWhereToEat.Padding = new System.Windows.Forms.Padding(2);
             this.gbWhereToEat.Size = new System.Drawing.Size(201, 81);
-            this.gbWhereToEat.TabIndex = 17;
+            this.gbWhereToEat.TabIndex = 14;
             this.gbWhereToEat.TabStop = false;
             this.gbWhereToEat.Text = "Where To Eat";
             // 
@@ -291,7 +291,7 @@
             this.rbTakeOut.Margin = new System.Windows.Forms.Padding(2);
             this.rbTakeOut.Name = "rbTakeOut";
             this.rbTakeOut.Size = new System.Drawing.Size(70, 17);
-            this.rbTakeOut.TabIndex = 18;
+            this.rbTakeOut.TabIndex = 16;
             this.rbTakeOut.Text = "Take Out";
             this.rbTakeOut.UseVisualStyleBackColor = true;
             this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rbTakeOut_CheckedChanged);
@@ -304,7 +304,7 @@
             this.rbEatIn.Margin = new System.Windows.Forms.Padding(2);
             this.rbEatIn.Name = "rbEatIn";
             this.rbEatIn.Size = new System.Drawing.Size(53, 17);
-            this.rbEatIn.TabIndex = 17;
+            this.rbEatIn.TabIndex = 15;
             this.rbEatIn.TabStop = true;
             this.rbEatIn.Text = "Eat In";
             this.rbEatIn.UseVisualStyleBackColor = true;
@@ -316,7 +316,7 @@
             this.btnOrderPizza.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderPizza.Name = "btnOrderPizza";
             this.btnOrderPizza.Size = new System.Drawing.Size(101, 24);
-            this.btnOrderPizza.TabIndex = 18;
+            this.btnOrderPizza.TabIndex = 17;
             this.btnOrderPizza.Text = "Order Pizza";
             this.btnOrderPizza.UseVisualStyleBackColor = true;
             this.btnOrderPizza.Click += new System.EventHandler(this.btnOrderPizza_Click);
@@ -327,7 +327,7 @@
             this.btnResetForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetForm.Name = "btnResetForm";
             this.btnResetForm.Size = new System.Drawing.Size(101, 24);
-            this.btnResetForm.TabIndex = 19;
+            this.btnResetForm.TabIndex = 18;
             this.btnResetForm.Text = "Reset Form";
             this.btnResetForm.UseVisualStyleBackColor = true;
             this.btnResetForm.Click += new System.EventHandler(this.btnResetForm_Click);
