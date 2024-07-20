@@ -83,14 +83,12 @@
             // rbSmall
             // 
             this.rbSmall.AutoSize = true;
-            this.rbSmall.Checked = true;
             this.rbSmall.Location = new System.Drawing.Point(21, 41);
             this.rbSmall.Margin = new System.Windows.Forms.Padding(2);
             this.rbSmall.Name = "rbSmall";
             this.rbSmall.Size = new System.Drawing.Size(50, 17);
             this.rbSmall.TabIndex = 1;
-            this.rbSmall.TabStop = true;
-            this.rbSmall.Tag = "10";
+            this.rbSmall.Tag = "20";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = true;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
@@ -98,12 +96,14 @@
             // rbMedium
             // 
             this.rbMedium.AutoSize = true;
+            this.rbMedium.Checked = true;
             this.rbMedium.Location = new System.Drawing.Point(21, 83);
             this.rbMedium.Margin = new System.Windows.Forms.Padding(2);
             this.rbMedium.Name = "rbMedium";
             this.rbMedium.Size = new System.Drawing.Size(62, 17);
             this.rbMedium.TabIndex = 2;
-            this.rbMedium.Tag = "20";
+            this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "30";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = true;
             this.rbMedium.CheckedChanged += new System.EventHandler(this.rbMedium_CheckedChanged);
@@ -116,7 +116,7 @@
             this.rbLarge.Name = "rbLarge";
             this.rbLarge.Size = new System.Drawing.Size(52, 17);
             this.rbLarge.TabIndex = 3;
-            this.rbLarge.Tag = "30";
+            this.rbLarge.Tag = "40";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = true;
             this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
@@ -146,7 +146,7 @@
             this.rbThin.Size = new System.Drawing.Size(72, 17);
             this.rbThin.TabIndex = 5;
             this.rbThin.TabStop = true;
-            this.rbThin.Tag = "10";
+            this.rbThin.Tag = "0";
             this.rbThin.Text = "Thin crust";
             this.rbThin.UseVisualStyleBackColor = true;
             this.rbThin.CheckedChanged += new System.EventHandler(this.rbThin_CheckedChanged);
@@ -159,7 +159,7 @@
             this.rbThick.Name = "rbThick";
             this.rbThick.Size = new System.Drawing.Size(78, 17);
             this.rbThick.TabIndex = 6;
-            this.rbThick.Tag = "20";
+            this.rbThick.Tag = "10";
             this.rbThick.Text = "Thick crust";
             this.rbThick.UseVisualStyleBackColor = true;
             this.rbThick.CheckedChanged += new System.EventHandler(this.rbThick_CheckedChanged);
@@ -238,7 +238,7 @@
             this.chkGreenPepeers.Name = "chkGreenPepeers";
             this.chkGreenPepeers.Size = new System.Drawing.Size(97, 17);
             this.chkGreenPepeers.TabIndex = 13;
-            this.chkGreenPepeers.Tag = "tyujtu";
+            this.chkGreenPepeers.Tag = "5";
             this.chkGreenPepeers.Text = "Green Pepeers";
             this.chkGreenPepeers.UseVisualStyleBackColor = true;
             this.chkGreenPepeers.CheckedChanged += new System.EventHandler(this.chkGreenPepeers_CheckedChanged);
@@ -391,9 +391,9 @@
             this.lblTotalPriceValue.Location = new System.Drawing.Point(88, 309);
             this.lblTotalPriceValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalPriceValue.Name = "lblTotalPriceValue";
-            this.lblTotalPriceValue.Size = new System.Drawing.Size(80, 25);
+            this.lblTotalPriceValue.Size = new System.Drawing.Size(43, 25);
             this.lblTotalPriceValue.TabIndex = 7;
-            this.lblTotalPriceValue.Text = "label9";
+            this.lblTotalPriceValue.Text = "$0";
             // 
             // lblWhereToEatValue
             // 

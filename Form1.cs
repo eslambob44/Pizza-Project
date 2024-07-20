@@ -20,64 +20,159 @@ namespace Pizza_Project
         private void frmPizzaOrder_Shown(object sender, EventArgs e)
         {
             
-            lblTotalPriceValue.Text="$"+(int.Parse(rbSmall.Tag.ToString())+int.Parse(rbThin.Tag.ToString())).ToString();
+            lblTotalPriceValue.Text="$"+GetTotalPrice().ToString();
    
         }
 
-        void ChangeTotalPrizeLabelbasedOnChangeOnPrize(int Prize)
+        void ChangeToppingsLabel()
         {
-            int TotalPrize;
-            TotalPrize = int.Parse(lblTotalPriceValue.Text.Substring(1,lblTotalPriceValue.Text.Length-1));
-            TotalPrize += Prize;
-            lblTotalPriceValue.Text = "$"+TotalPrize.ToString();
+            string ToppingsLabel = "";
+            if(chkExtraCheese.Checked) 
+            { 
+                ToppingsLabel = chkExtraCheese.Text; 
+            }
+            if(chkGreenPepeers.Checked)
+            {
+                ToppingsLabel += "," + chkGreenPepeers.Text;
+            }
+            if(chkMashrooms.Checked)
+            {
+                ToppingsLabel += "," + chkMashrooms.Text;
+            }
+            if(chkOlives.Checked)
+            {
+                ToppingsLabel += "," + chkOlives.Text;
+            }
+            if(chkOnion.Checked)
+            {
+                ToppingsLabel+= "," + chkOnion.Text;
+            }
+            if(chkTomatoes.Checked)
+            {
+                ToppingsLabel += "," + chkTomatoes.Text;
+            }
+
+            if(ToppingsLabel!="")
+            {
+                if (ToppingsLabel.ElementAt(0) == ',')
+                {
+                    ToppingsLabel = ToppingsLabel.Substring(1);
+                }
+            }
+            if(ToppingsLabel=="")
+            {
+                ToppingsLabel = "No Toppings";
+            }
+            
+            lblToppingsValue.Text = ToppingsLabel;
         }
 
-        int GetPrize(RadioButton rb)
+        void ChangeTotalPrizeLabel()
         {
-            int temp;
-            if(rb.Tag==null || !int.TryParse(rb.Tag.ToString(),out temp)) return 0;
-            int Prize = Convert.ToInt32(rb.Tag);
-            Prize *= (rb.Checked) ? 1 : -1;
-            return Prize;
+            lblTotalPriceValue.Text = "$" + GetTotalPrice().ToString();
         }
 
-        int GetPrize(CheckBox chk)
+
+
+        float GetSizePrice()
         {
-            int temp;
-            if (chk.Tag == null || !int.TryParse(chk.Tag.ToString(), out temp)) return 0;
-            int Prize = Convert.ToInt32(chk.Tag);
-            Prize *= (chk.Checked) ? 1 : -1;
-            return Prize;
+            if(rbSmall.Checked) 
+            {
+                return Convert.ToSingle(rbSmall.Tag);
+            }
+            if(rbMedium.Checked)
+            {
+                return Convert.ToSingle(rbMedium.Tag);
+            }
+            if (rbLarge.Checked)
+            {
+                return Convert.ToSingle(rbLarge.Tag);
+            }
+            return 0;
+        }
+
+        float GetCrustPrice()
+        {
+            if(rbThin.Checked)
+            {
+                return Convert.ToSingle(rbThin.Tag);
+            }
+            if(rbThick.Checked)
+            {
+                return Convert.ToSingle(rbThick.Tag);
+            }
+            return 0;
+        }
+
+        float GetToppingsPrice()
+        {
+            float ToppingsPrice = 0;
+            if(chkExtraCheese.Checked)
+            {
+                ToppingsPrice +=Convert.ToSingle(chkExtraCheese.Tag);
+            }
+
+            if(chkGreenPepeers.Checked)
+            {
+                ToppingsPrice += Convert.ToSingle(chkGreenPepeers.Tag);
+            }
+
+            if(chkMashrooms.Checked)
+            {
+                ToppingsPrice += Convert.ToSingle(chkMashrooms.Tag);
+            }
+
+            if(chkOlives.Checked)
+            {
+                ToppingsPrice += Convert.ToSingle(chkOlives.Tag);
+            }
+
+            if(chkOnion.Checked)
+            {
+                ToppingsPrice += Convert.ToSingle(chkOnion.Tag);
+            }
+
+            if(chkTomatoes.Checked)
+            {
+                ToppingsPrice += Convert.ToSingle(chkTomatoes.Tag);
+            }
+
+            return ToppingsPrice;
+        }
+
+        float GetTotalPrice()
+        {
+            return GetSizePrice() + GetCrustPrice() + GetToppingsPrice();
         }
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
             
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(rbSmall));
+            
             lblSizeValue.Text = rbSmall.Text;
         }
 
         private void rbMedium_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(rbMedium));
+            ChangeTotalPrizeLabel();
             lblSizeValue.Text = rbMedium.Text;
         }
 
         private void rbLarge_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(rbLarge));
+            ChangeTotalPrizeLabel();
             lblSizeValue.Text = rbLarge.Text;
 
         }
 
         private void rbThin_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(rbThin));
+            ChangeTotalPrizeLabel();
             lblCrustTypeValue.Text = rbThin.Text;
         }
 
         private void rbThick_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(rbThick));
+            ChangeTotalPrizeLabel();
             lblCrustTypeValue.Text = rbThick.Text;
         }
 
@@ -91,81 +186,53 @@ namespace Pizza_Project
             lblWhereToEatValue.Text = rbTakeOut.Text;
         }
 
-        string RemoveSubStringFromString(string S1 ,string SubString)
-        {
-            return S1.Remove(S1.IndexOf(SubString),SubString.Length);
-        }
+        
 
-        void DeleteToppingFromToppingsLabel(CheckBox chkTopping)
-        {
-            if (lblToppingsValue.Text.IndexOf(chkTopping.Text) == 0)
-            {
-                if (lblToppingsValue.Text == chkTopping.Text)
-                {
-                    lblToppingsValue.Text = default(string);
-                    lblToppingsValue.Text = "No Toppings";
-                }
-                else
-                {
-                    lblToppingsValue.Text = RemoveSubStringFromString(lblToppingsValue.Text, chkTopping.Text + ",");
-                }
-
-            }
-            else
-            {
-                lblToppingsValue.Text = RemoveSubStringFromString(lblToppingsValue.Text, "," + chkTopping.Text);
-            }
-        }
-
-        void ChangeToppingsLabel(CheckBox chkTopping)
-        {
-
-            if (chkTopping.Checked)
-            {
-                if (lblToppingsValue.Text == "No Toppings") lblToppingsValue.Text = "";
-                if(lblToppingsValue.Text!="") lblToppingsValue.Text += ",";
-                lblToppingsValue.Text += chkTopping.Text;
-            }
-            else 
-            {
-                DeleteToppingFromToppingsLabel(chkTopping);
-            }
-        }
 
         private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkExtraCheese));
-            ChangeToppingsLabel(chkExtraCheese);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
         }
 
         private void chkOnion_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkOnion));
-            ChangeToppingsLabel(chkOnion);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
         }
 
         private void chkMashrooms_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkMashrooms));
-            ChangeToppingsLabel(chkMashrooms);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
         }
 
         private void chkOlives_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkOlives));
-            ChangeToppingsLabel(chkOlives);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
         }
 
         private void chkTomatoes_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkTomatoes));
-            ChangeToppingsLabel(chkTomatoes);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
         }
 
         private void chkGreenPepeers_CheckedChanged(object sender, EventArgs e)
         {
-            ChangeTotalPrizeLabelbasedOnChangeOnPrize(GetPrize(chkGreenPepeers));
-            ChangeToppingsLabel(chkGreenPepeers);
+            ChangeTotalPrizeLabel();
+            ChangeToppingsLabel();
+        }
+
+        void ConfirmOrder()
+        {
+            MessageBox.Show("Ordered Success");
+            gbCrust.Enabled = false;
+            gbPizzaSize.Enabled = false;
+            gbToppings.Enabled = false;
+            gbWhereToEat.Enabled = false;
+            btnOrderPizza.Enabled = false;
         }
 
         private void btnOrderPizza_Click(object sender, EventArgs e)
@@ -173,31 +240,36 @@ namespace Pizza_Project
             if(MessageBox.Show("Are You Sure You Want To Order","Confirm Order",MessageBoxButtons.YesNo,MessageBoxIcon.Question)
                 ==DialogResult.Yes)
             {
-                MessageBox.Show("Ordered Success");
-                gbCrust.Enabled = false;
-                gbPizzaSize.Enabled = false;
-                gbToppings.Enabled = false;
-                gbWhereToEat.Enabled = false;
-                btnOrderPizza.Enabled = false;
+                ConfirmOrder();
             }
         }
 
-        private void btnResetForm_Click(object sender, EventArgs e)
+        
+
+        void ResetForm()
         {
             gbCrust.Enabled = true;
             gbPizzaSize.Enabled = true;
             gbToppings.Enabled = true;
             gbWhereToEat.Enabled = true;
+
             btnOrderPizza.Enabled = true;
-            rbSmall.Checked = true;
+
+            rbMedium.Checked = true;
             rbThin.Checked = true;
             rbEatIn.Checked = true;
+
             chkExtraCheese.Checked = false;
             chkGreenPepeers.Checked = false;
             chkMashrooms.Checked = false;
             chkOlives.Checked = false;
-            chkOnion.Checked=false;
+            chkOnion.Checked = false;
             chkTomatoes.Checked = false;
+        }
+
+        private void btnResetForm_Click(object sender, EventArgs e)
+        {
+            ResetForm();
 
         }
     }
