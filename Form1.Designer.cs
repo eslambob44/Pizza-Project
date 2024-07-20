@@ -123,6 +123,7 @@
             // 
             // gbPizzaSize
             // 
+            this.gbPizzaSize.BackColor = System.Drawing.Color.Transparent;
             this.gbPizzaSize.Controls.Add(this.rbLarge);
             this.gbPizzaSize.Controls.Add(this.rbMedium);
             this.gbPizzaSize.Controls.Add(this.rbSmall);
@@ -165,6 +166,7 @@
             // 
             // gbCrust
             // 
+            this.gbCrust.BackColor = System.Drawing.Color.Transparent;
             this.gbCrust.Controls.Add(this.rbThin);
             this.gbCrust.Controls.Add(this.rbThick);
             this.gbCrust.Location = new System.Drawing.Point(25, 262);
@@ -256,12 +258,14 @@
             // 
             // gbToppings
             // 
+            this.gbToppings.BackColor = System.Drawing.Color.Transparent;
             this.gbToppings.Controls.Add(this.chkTomatoes);
             this.gbToppings.Controls.Add(this.chkGreenPepeers);
             this.gbToppings.Controls.Add(this.chkOlives);
             this.gbToppings.Controls.Add(this.chkMashrooms);
             this.gbToppings.Controls.Add(this.chkOnion);
             this.gbToppings.Controls.Add(this.chkExtraCheese);
+            this.gbToppings.ForeColor = System.Drawing.Color.Gold;
             this.gbToppings.Location = new System.Drawing.Point(250, 93);
             this.gbToppings.Margin = new System.Windows.Forms.Padding(2);
             this.gbToppings.Name = "gbToppings";
@@ -273,6 +277,7 @@
             // 
             // gbWhereToEat
             // 
+            this.gbWhereToEat.BackColor = System.Drawing.Color.Transparent;
             this.gbWhereToEat.Controls.Add(this.rbTakeOut);
             this.gbWhereToEat.Controls.Add(this.rbEatIn);
             this.gbWhereToEat.Location = new System.Drawing.Point(250, 262);
@@ -312,13 +317,14 @@
             // 
             // btnOrderPizza
             // 
+            this.btnOrderPizza.BackColor = System.Drawing.Color.Transparent;
             this.btnOrderPizza.Location = new System.Drawing.Point(268, 380);
             this.btnOrderPizza.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderPizza.Name = "btnOrderPizza";
             this.btnOrderPizza.Size = new System.Drawing.Size(101, 24);
             this.btnOrderPizza.TabIndex = 17;
             this.btnOrderPizza.Text = "Order Pizza";
-            this.btnOrderPizza.UseVisualStyleBackColor = true;
+            this.btnOrderPizza.UseVisualStyleBackColor = false;
             this.btnOrderPizza.Click += new System.EventHandler(this.btnOrderPizza_Click);
             // 
             // btnResetForm
@@ -346,7 +352,7 @@
             this.gbOrderSummary.Controls.Add(this.lblSizeValue);
             this.gbOrderSummary.Controls.Add(this.lblSize);
             this.gbOrderSummary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOrderSummary.ForeColor = System.Drawing.Color.Black;
+            this.gbOrderSummary.ForeColor = System.Drawing.Color.Gold;
             this.gbOrderSummary.Location = new System.Drawing.Point(620, 51);
             this.gbOrderSummary.Margin = new System.Windows.Forms.Padding(2);
             this.gbOrderSummary.Name = "gbOrderSummary";
@@ -448,7 +454,7 @@
             // 
             this.lblSizeValue.AutoSize = true;
             this.lblSizeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSizeValue.ForeColor = System.Drawing.Color.Black;
+            this.lblSizeValue.ForeColor = System.Drawing.Color.Gold;
             this.lblSizeValue.Location = new System.Drawing.Point(56, 45);
             this.lblSizeValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSizeValue.Name = "lblSizeValue";
@@ -460,7 +466,7 @@
             // 
             this.lblSize.AutoSize = true;
             this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSize.ForeColor = System.Drawing.Color.Black;
+            this.lblSize.ForeColor = System.Drawing.Color.Gold;
             this.lblSize.Location = new System.Drawing.Point(20, 45);
             this.lblSize.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSize.Name = "lblSize";
@@ -472,6 +478,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(945, 450);
             this.Controls.Add(this.gbOrderSummary);
